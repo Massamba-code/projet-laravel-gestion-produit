@@ -1,5 +1,12 @@
 <?php
 
+use App\Http\Controllers\categorieController;
+use App\Http\Controllers\clientController;
+use App\Http\Controllers\commandeController;
+use App\Http\Controllers\produitController;
+use App\Http\Controllers\RoleController;
+use App\Http\Controllers\usercontroller;
+use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -14,5 +21,26 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    return view('auth.login');
 });
+
+
+//Route::get('/',[\App\Http\Controllers\usercontroller::class, 'index']);
+//Route::post('/user/store',[\App\Http\Controllers\usercontroller::class, 'store'])->name('user.store');
+//Route::get('/users.listeusers',[\App\Http\Controllers\usercontroller::class, 'index'])->name('users.listeusers');
+//Route::get('update_etudiant/{id}',[\App\Http\Controllers\usercontroller::class, 'edit'])->name('update_etudiant');
+
+//Route::post('/login',[\App\Http\Controllers\AuthController::class,'login'])->name('login');
+
+Auth::routes();
+
+Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+
+Route::resources([
+    'roles' => RoleController::class,
+    'users' => usercontroller::class,
+    'produits' => produitController::class,
+    'commandes' => commandeController::class,
+    'clients' => clientController::class,
+    'categories' => categorieController::class,
+]);
