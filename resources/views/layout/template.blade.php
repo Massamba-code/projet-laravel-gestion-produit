@@ -360,8 +360,8 @@
                             </a>
                             <ul class="dropdown-menu">
                                 <li>
-                                    <a class="dropdown-item" href="index.html">
-                                        <span>Analytics</span>
+                                    <a class="dropdown-item" href="{{ route('dashboards.index') }}">
+                                        <span>Clients</span>
                                     </a>
                                 </li>
                                 <li>
@@ -451,7 +451,7 @@
                             </a>
                             <ul class="dropdown-menu mega-menu">
                                 <li>
-                                    <a class="dropdown-item" href="accordions.html">
+                                    <a class="dropdown-item" href="{{ route('commandes.index') }}">
                                         <span>Nouvelle Commande</span>
                                     </a>
                                 </li>

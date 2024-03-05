@@ -13,11 +13,12 @@ return new class extends Migration
     {
         Schema::create('commandes', function (Blueprint $table) {
             $table->id();
-            $table->foreignId('prod_id')->constrained('produits')->cascadeOnDelete();
-            $table->foreignId('client_id')->constrained('clients')->cascadeOnDelete();
-            $table->integer('quantite')->default(1);
+            $table->date('date_commande');
+            $table->enum('status',['en attente', 'validée','livrée'])->default('en attente');
 
-
+            // Clé étrangère pour la relation entre commandes et clients
+            $table->unsignedBigInteger('client_id');
+            $table->foreign('client_id')->references('id')->on('clients');
 
             $table->timestamps();
         });

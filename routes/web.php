@@ -3,6 +3,7 @@
 use App\Http\Controllers\categorieController;
 use App\Http\Controllers\clientController;
 use App\Http\Controllers\commandeController;
+use App\Http\Controllers\DashboardController;
 use App\Http\Controllers\produitController;
 use App\Http\Controllers\RoleController;
 use App\Http\Controllers\usercontroller;
@@ -43,4 +44,5 @@ Route::resources([
     'commandes' => commandeController::class,
     'clients' => clientController::class,
     'categories' => categorieController::class,
+    'dashboards'=> DashboardController::class,
 ]);

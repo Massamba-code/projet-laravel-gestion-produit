@@ -21,8 +21,8 @@ class produitModel extends Model
     {
         return $this->hasOne(categorieModel::class);
     }
-    public function clients()
+    public function commande()
     {
-        return $this->belongsToMany(clientModel::class);
+        return $this->belongsToMany(Commande::class);
     }
 }

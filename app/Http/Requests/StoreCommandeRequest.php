@@ -22,9 +22,10 @@ class StoreCommandeRequest extends FormRequest
     public function rules(): array
     {
         return [
-            'prod_id' => 'required',
-            'client_id' => 'required',
-            'quantite' => 'required'
+            'client_id' => 'required|exists:clients,id',
+            'produits.*' => 'required|exists:produits,id',
+            'quantite.*' => 'required|integer|min:1',
+            'prix.*' => 'required|numeric|min:0',
 
 
         ];
