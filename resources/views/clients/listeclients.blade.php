@@ -1,9 +1,40 @@
 @extends('layout.template')
 @section('container')
 
+<!-- formulaire d'export -->
+    <div class="modal fade" id="export" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Exporter dans un fichier </h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body" >
+                    <form action="{{ route('clients.clientexport') }}"  class="row g-3 needs-validation"  method="get"   >
+                        @csrf
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="radio" name="csv" id="inlineRadio1" value="csv">
+                            <label class="form-check-label" for="csv">CSV</label>
+                        </div>
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="radio" name="excel" id="inlineRadio2" value="excel">
+                            <label class="form-check-label" for="excel">Excel</label>
+                        </div>
 
 
 
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fermer</button>
+                            <button  type="submit" class="btn btn-primary"  >Exporter</button>
+                        </div>
+                    </form>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+<!--fin formulaire d'export-->
     <!--FORMULAIRE D'ajout-->
     <div class="modal fade" id="ajouter" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
         <div class="modal-dialog">
@@ -85,6 +116,8 @@
                         @can('create-client')
                             <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#ajouter"> Ajouter Client</button>
                         @endcan
+                            <button class="btn btn-secondary  " data-bs-toggle="modal" data-bs-target="#export"> Exporter</button>
+
                         <hr>
                         @if(session('status'))
                             <div class="alert alert-success">

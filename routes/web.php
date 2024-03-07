@@ -4,6 +4,7 @@ use App\Http\Controllers\categorieController;
 use App\Http\Controllers\clientController;
 use App\Http\Controllers\commandeController;
 use App\Http\Controllers\DashboardController;
+use App\Http\Controllers\exportcontroller;
 use App\Http\Controllers\produitController;
 use App\Http\Controllers\RoleController;
 use App\Http\Controllers\usercontroller;
@@ -36,6 +37,8 @@ Route::get('/', function () {
 Auth::routes();
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+Route::get('/clients/export', [exportcontroller::class, 'clientexport'])->name('clients.clientexport');
+Route::get('/produits/export', [exportcontroller::class, 'produitexport'])->name('produits.produitexport');
 
 Route::resources([
     'roles' => RoleController::class,

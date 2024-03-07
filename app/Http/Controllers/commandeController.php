@@ -37,30 +37,36 @@ class commandeController extends Controller
     {
         $request->validate([
             'date_commande' => 'required|date',
-            'client' => 'required|string',
+            'client_id' => 'required|exists:clients,id',
             'produits' => 'required|array|min:1', // Au moins un produit est requis
             'produits.*.id' => 'required|exists:produits,id',
-            'produits.*.quantite' => 'required|integer|min:1',
-            'produits.*.prix_unitaire' => 'required|numeric|min:0',
+            'quantite' => 'required|array|min:1',
+            'quantite.*' => 'required|integer|min:1',
         ]);
 
         // Créer une nouvelle commande
         $commande = new Commande();
         $commande->date_commande = $request->date_commande;
-        $commande->client = $request->client;
+        $commande->client_id = $request->client_id;
         $commande->save();
 
         // Ajouter les produits à la commande
-        foreach ($request->produits as $produitData) {
+        foreach ($request->produits as $key => $produitData) {
+            $produit = produitModel::findOrFail($produitData['id']); // Récupérer le produit
+            $quantite = $request->quantite[$key];
+            $prix_unitaire = $produit->prix; // Prix unitaire du produit depuis la table produits
+            $total = $quantite * $prix_unitaire; // Calculer le total
+
             $commande->produits()->attach($produitData['id'], [
-                'quantite' => $produitData['quantite'],
-                'prix_unitaire' => $produitData['prix_unitaire'],
+                'quantite' => $quantite,
+                'total' => $total,
             ]);
         }
 
         // Rediriger avec un message de succès
-        return redirect()->route('commande.index')->with('success', 'La commande a été ajoutée avec succès.');
+        return redirect()->route('commandes.index')->with('success', 'La commande a été ajoutée avec succès.');
     }
+
 
 
     /**

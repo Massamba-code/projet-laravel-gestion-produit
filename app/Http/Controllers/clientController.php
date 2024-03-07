@@ -2,10 +2,12 @@
 
 namespace App\Http\Controllers;
 
+use App\Exports\clientexport;
 use App\Http\Requests\StoreClientRequest;
 use App\Models\clientModel;
 use Illuminate\Http\Request;
 use Illuminate\View\View;
+use Maatwebsite\Excel\Facades\Excel;
 use PhpParser\Node\Scalar\String_;
 
 
@@ -80,4 +82,5 @@ class clientController extends Controller
         $client->delete();
         return redirect()->route('clients.index')->with('Client suprrimer avec succes');
     }
+
 }

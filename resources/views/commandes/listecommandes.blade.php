@@ -12,11 +12,7 @@
                 </div>
                 <!-- Row start -->
                 <div class="row gx-2" >
-                    @if(session('status'))
-                        <div class="alert alert-success">
-                            {{ session('status') }}
-                        </div>
-                    @endif
+
                     <ul>
                         @foreach($errors->all() as $error)
                             <li class="alert alert-danger"> {{$error}}</li>
@@ -42,7 +38,7 @@
                                                     <label for="client" class="form-label">Client:</label>
                                                     <br>
                                                     <br>
-                                                    <select id="client_id" name="client" class="form-select client">
+                                                    <select id="client_id" name="client_id" class="form-select client">
                                                         <option value="" selected disabled>Sélectionnez le client</option>
                                                         @foreach ($clients as $client)
                                                             <option value="{{ $client->id }}"  >{{ $client->prenom }} {{ $client->nom }}</option>
@@ -66,9 +62,9 @@
                                                 @endforeach
                                             </select>
                                             <label for="quantite">Quantité :</label>
-                                            <input type="number" class="form-control quantite" id="quantite" name="quantite[0]" min="1">
+                                            <input type="number" class="form-control quantite" name="quantite[]" min="1">
                                             <label for="prixUnitaire">Prix unitaire :</label>
-                                            <input type="text" class="form-control prixUnitaire" name="prix[0]" readonly>
+                                            <input type="text" class="form-control prixUnitaire" name="prix[]" readonly>
                                         </div>
                                     </div>
 
@@ -103,6 +99,11 @@
                             <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#ajouter"> Ajouter commande</button>
                         @endcan
                         <hr>
+                            @if(session('status'))
+                                <div class="alert alert-success">
+                                    {{ session('status') }}
+                                </div>
+                            @endif
 
                         <table class="table table-bordered table-striped align-middle m-0">
                             <thead>
@@ -118,21 +119,22 @@
                             </tr>
                             </thead>
                             <tbody>
+                            <tr>
                             @foreach($commandes as $commande)
-                                <tr>
-                                    <td>{{$commande->id}}</td>
-                                    <th>
-                                        <img src="{{asset('storage/'.$commande->photo)}}" class="me-2 img-3x rounded-3"
-                                             alt="photo commande" />
-                                    </th>
-                                    <td>{{$commande->libelle}}</td>
-                                    {{$cat=\App\Models\categorieModel::find($commande->cat_id)}}
-                                    <td>{{$cat->titre}}</td>
-                                    <td>{{$commande->description}}</td>
-                                    <td>{{$commande->stock}}</td>
-                                    <td>{{$commande->prix}}</td>
+                                @foreach($commande->produits as $produit)
 
+                                        <td>{{$commande->id}}</td>
+                                        <th>
+                                            <img src="{{asset('storage/'.$produit->photo)}}" class="me-2 img-3x rounded-3" alt="photo commande" />
+                                        </th>
+                                        <td>{{$produit->libelle}}</td>
+                                        <td>{{$produit->categories->titre}}</td>
+                                        <td>{{$produit->description}}</td>
+                                        <td>{{$produit->stock}}</td>
+                                        <td>{{$produit->prix}}</td>
+                                        <!-- Autres colonnes et actions -->
 
+                                @endforeach
 
                                     <td>
                                         <form action="{{route('commandes.destroy', $commande->id)}}" method="post">

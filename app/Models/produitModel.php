@@ -19,10 +19,10 @@ class produitModel extends Model
     ];
     public function categories()
     {
-        return $this->hasOne(categorieModel::class);
+        return $this->belongsTo(categorieModel::class,'cat_id');
     }
     public function commande()
     {
-        return $this->belongsToMany(Commande::class);
+        return $this->belongsToMany(Commande::class, 'pivot_commandes','commande_id','produit_id')->withPivot('quantite', 'total');
     }
 }

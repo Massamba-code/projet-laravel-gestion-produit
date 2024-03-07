@@ -96,177 +96,7 @@
                             </div>
                             <!-- Search container end -->
 
-                            <div class="dropdown">
-                                <a
-                                    class="dropdown-toggle d-flex p-3 position-relative"
-                                    href="#!"
-                                    role="button"
-                                    data-bs-toggle="dropdown"
-                                    aria-expanded="false"
-                                >
-                                    <img
-                                        src="assets/images/flags/1x1/br.svg"
-                                        class="flag-img"
-                                        alt="Brazil"
-                                    />
-                                </a>
-                                <div
-                                    class="dropdown-menu dropdown-menu-end shadow-sm dropdown-menu-mini"
-                                >
-                                    <div class="country-container">
-                                        <a href="index.html" class="py-2">
-                                            <img src="assets/images/flags/1x1/us.svg" alt="USA" />
-                                        </a>
-                                        <a href="index.html" class="py-2">
-                                            <img
-                                                src="assets/images/flags/1x1/in.svg"
-                                                alt="India"
-                                            />
-                                        </a>
-                                        <a href="index.html" class="py-2">
-                                            <img
-                                                src="assets/images/flags/1x1/tr.svg"
-                                                alt="Turkey"
-                                            />
-                                        </a>
-                                        <a href="index.html" class="py-2">
-                                            <img
-                                                src="assets/images/flags/1x1/gb.svg"
-                                                alt="Great Britain"
-                                            />
-                                        </a>
-                                        <a href="index.html" class="py-2">
-                                            <img
-                                                src="assets/images/flags/1x1/id.svg"
-                                                alt="Indonesia"
-                                            />
-                                        </a>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="dropdown d-sm-block d-none">
-                                <a
-                                    class="dropdown-toggle d-flex p-3 position-relative"
-                                    href="#!"
-                                    role="button"
-                                    data-bs-toggle="dropdown"
-                                    aria-expanded="false"
-                                >
-                                    <i class="icon-mail fs-4 lh-1"></i>
-                                    <span class="count rounded-circle bg-danger">9</span>
-                                </a>
-                                <div
-                                    class="dropdown-menu dropdown-menu-end dropdown-menu-md shadow-sm"
-                                >
-                                    <h5 class="fw-semibold px-3 py-2 m-0">Messages</h5>
-                                    <a href="javascript:void(0)" class="dropdown-item">
-                                        <div class="d-flex align-items-start py-2">
-                                            <div class="p-3 bg-danger rounded-circle me-3">
-                                                MS
-                                            </div>
-                                            <div class="m-0">
-                                                <h6 class="mb-1 fw-semibold">Moory Sammy</h6>
-                                                <p class="mb-1">Sent a mail.</p>
-                                                <p class="small m-0 opacity-50">3 Mins Ago</p>
-                                            </div>
-                                        </div>
-                                    </a>
-                                    <a href="javascript:void(0)" class="dropdown-item">
-                                        <div class="d-flex align-items-start py-2">
-                                            <div class="p-3 bg-primary rounded-circle me-3">
-                                                KY
-                                            </div>
-                                            <div class="m-0">
-                                                <h6 class="mb-1 fw-semibold">Kyle Yomaha</h6>
-                                                <p class="mb-1">Need support.</p>
-                                                <p class="small m-0 opacity-50">5 Mins Ago</p>
-                                            </div>
-                                        </div>
-                                    </a>
-                                    <a href="javascript:void(0)" class="dropdown-item">
-                                        <div class="d-flex align-items-start py-2">
-                                            <div class="p-3 bg-success rounded-circle me-3">
-                                                SB
-                                            </div>
-                                            <div class="m-0">
-                                                <h6 class="mb-1 fw-semibold">Srinu Basava</h6>
-                                                <p class="mb-1">Purchased a NotePad.</p>
-                                                <p class="small m-0 opacity-50">7 Mins Ago</p>
-                                            </div>
-                                        </div>
-                                    </a>
-                                    <div class="d-grid p-3 border-top">
-                                        <a
-                                            href="javascript:void(0)"
-                                            class="btn btn-outline-primary"
-                                        >View all</a
-                                        >
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="dropdown d-sm-block d-none">
-                                <a
-                                    class="dropdown-toggle d-flex p-3 position-relative"
-                                    href="#!"
-                                    role="button"
-                                    data-bs-toggle="dropdown"
-                                    aria-expanded="false"
-                                >
-                                    <i class="icon-twitch fs-4 lh-1"></i>
-                                    <span class="count rounded-circle bg-danger">5</span>
-                                </a>
-                                <div
-                                    class="dropdown-menu dropdown-menu-end dropdown-menu-md shadow-sm"
-                                >
-                                    <h5 class="fw-semibold px-3 py-2 m-0">Notifications</h5>
-                                    <a href="javascript:void(0)" class="dropdown-item">
-                                        <div class="d-flex align-items-start py-2">
-                                            <img
-                                                src="assets/images/user.png"
-                                                class="img-3x me-3 rounded-3"
-                                                alt="Admin Themes"
-                                            />
-                                        </div>
-                                    </a>
-                                    <a href="javascript:void(0)" class="dropdown-item">
-                                        <div class="d-flex align-items-start py-2">
-                                            <img
-                                                src="assets/images/user2.png"
-                                                class="img-3x me-3 rounded-3"
-                                                alt="Admin Theme"
-                                            />
-                                            <div class="m-0">
-                                                <h6 class="mb-1 fw-semibold">Sophie Michiels</h6>
-                                                <p class="mb-1">Congratulate, James for new job.</p>
-                                                <p class="small m-0 opacity-50">Today, 08:00pm</p>
-                                            </div>
-                                        </div>
-                                    </a>
-                                    <a href="javascript:void(0)" class="dropdown-item">
-                                        <div class="d-flex align-items-start py-2">
-                                            <img
-                                                src="assets/images/user1.png"
-                                                class="img-3x me-3 rounded-3"
-                                                alt="Admin Theme"
-                                            />
-                                            <div class="m-0">
-                                                <h6 class="mb-1 fw-semibold">Sophie Michiels</h6>
-                                                <p class="mb-1">
-                                                    Lewis added new schedule release.
-                                                </p>
-                                                <p class="small m-0 opacity-50">Today, 09:30pm</p>
-                                            </div>
-                                        </div>
-                                    </a>
-                                    <div class="d-grid p-3 border-top">
-                                        <a
-                                            href="javascript:void(0)"
-                                            class="btn btn-outline-primary"
-                                        >View all</a
-                                        >
-                                    </div>
-                                </div>
-                            </div>
+
                             <div class="dropdown ms-2">
                                 <a
                                     class="dropdown-toggle d-flex align-items-center user-settings"
@@ -348,6 +178,7 @@
                         </button>
                     </div>
                     <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                        @can('view-dashboard')
                         <li class="nav-item dropdown">
                             <a
                                 class="nav-link dropdown-toggle"
@@ -360,9 +191,11 @@
                             </a>
                             <ul class="dropdown-menu">
                                 <li>
+
                                     <a class="dropdown-item" href="{{ route('dashboards.index') }}">
                                         <span>Clients</span>
                                     </a>
+
                                 </li>
                                 <li>
                                     <a class="dropdown-item" href="reports.html">
@@ -371,6 +204,7 @@
                                 </li>
                             </ul>
                         </li>
+                        @endcan
                         <li class="nav-item dropdown">
                             <a
                                 class="nav-link dropdown-toggle"
@@ -413,7 +247,9 @@
                             <a class="nav-link " href="{{ route('clients.index') }}"> Clients </a>
                         </li>
                         <li class="nav-item active-link">
+                            @can('create-user','edit-user','delete-user')
                             <a class="nav-link" href="{{ route('users.index') }}"> Utilisateurs </a>
+                            @endcan
                         </li>
                         <li class="nav-item dropdown active-link">
                             <a
@@ -450,21 +286,28 @@
                                 Commande
                             </a>
                             <ul class="dropdown-menu mega-menu">
+                                @can('create-commande')
                                 <li>
                                     <a class="dropdown-item" href="{{ route('commandes.index') }}">
                                         <span>Nouvelle Commande</span>
                                     </a>
                                 </li>
+                                @endcan
+
                                 <li>
+                                    @can('edit-commande')
                                     <a class="dropdown-item" href="accordions.html">
                                         <span>En cours</span>
                                     </a>
                                 </li>
+                                    @endcan
+                                    @can('delete-commande')
                                 <li>
                                     <a class="dropdown-item" href="alerts.html">
                                         <span>Validés</span>
                                     </a>
                                 </li>
+                                    @endcan
 
                             </ul>
                         </li>
@@ -476,144 +319,19 @@
                                 data-bs-toggle="dropdown"
                                 aria-expanded="false"
                             >
-                                Forms
+                                Administrer
                             </a>
                             <ul class="dropdown-menu">
                                 <li>
-                                    <a class="dropdown-item" href="{{ route('roles.index') }}"
-                                    ><span>Roles</span></a
-                                    >
+                                    @can('create-role','edit-role','delete-role')
+                                    <a class="dropdown-item" href="{{ route('roles.index') }}"><span>Roles</span></a>
+                                    @endcan
                                 </li>
-                                <li>
-                                    <a class="dropdown-item" href="form-checkbox-radio.html"
-                                    ><span>Checkbox &amp; Radio</span></a
-                                    >
-                                </li>
-                                <li>
-                                    <a class="dropdown-item" href="form-file-input.html"
-                                    ><span>File Input</span></a
-                                    >
-                                </li>
-                                <li>
-                                    <a class="dropdown-item" href="form-validations.html"
-                                    ><span>Validations</span></a
-                                    >
-                                </li>
-                                <li>
-                                    <a class="dropdown-item" href="form-layouts.html"
-                                    >Form Layouts</a
-                                    >
-                                </li>
+
                             </ul>
                         </li>
-                        <li class="nav-item dropdown">
-                            <a
-                                class="nav-link dropdown-toggle"
-                                href="#"
-                                role="button"
-                                data-bs-toggle="dropdown"
-                                aria-expanded="false"
-                            >
-                                Plugins
-                            </a>
-                            <ul class="dropdown-menu">
-                                <li>
-                                    <a class="dropdown-item" href="apex.html"
-                                    ><span>Apex Graphs</span>
-                                    </a>
-                                </li>
-                                <li>
-                                    <a class="dropdown-item" href="morris.html"
-                                    ><span>Morris Graphs</span>
-                                    </a>
-                                </li>
-                                <li>
-                                    <a class="dropdown-item" href="editor.html"
-                                    ><span>Editor</span>
-                                    </a>
-                                </li>
-                                <li>
-                                    <a class="dropdown-item" href="calendar.html"
-                                    ><span>Calendar Daygrid View</span>
-                                    </a>
-                                </li>
-                                <li>
-                                    <a
-                                        class="dropdown-item"
-                                        href="calendar-external-draggable.html"
-                                    ><span>Calendar External Draggable</span>
-                                    </a>
-                                </li>
-                                <li>
-                                    <a class="dropdown-item" href="calendar-google.html"
-                                    ><span>Calendar Google</span>
-                                    </a>
-                                </li>
-                                <li>
-                                    <a class="dropdown-item" href="calendar-list-view.html"
-                                    ><span>Calendar List View</span>
-                                    </a>
-                                </li>
-                                <li>
-                                    <a class="dropdown-item" href="calendar-selectable.html"
-                                    ><span>Calendar Selectable</span>
-                                    </a>
-                                </li>
-                                <li>
-                                    <a class="dropdown-item" href="date-time-pickers.html"
-                                    ><span>Date Time Pickers</span></a
-                                    >
-                                </li>
-                                <li>
-                                    <a class="dropdown-item" href="datatables.html"
-                                    ><span>Data Tables</span></a
-                                    >
-                                </li>
-                                <li>
-                                    <a class="dropdown-item" href="maps.html"
-                                    ><span>Maps</span></a
-                                    >
-                                </li>
-                            </ul>
-                        </li>
-                        <li class="nav-item dropdown">
-                            <a
-                                class="nav-link dropdown-toggle"
-                                href="#"
-                                role="button"
-                                data-bs-toggle="dropdown"
-                                aria-expanded="false"
-                            >
-                                Login
-                            </a>
-                            <ul class="dropdown-menu">
-                                <li>
-                                    <a class="dropdown-item" href="login.html">
-                                        <span>Login</span>
-                                    </a>
-                                </li>
-                                <li>
-                                    <a class="dropdown-item" href="signup.html">
-                                        <span>Signup</span>
-                                    </a>
-                                </li>
-                                <li>
-                                    <a class="dropdown-item" href="forgot-password.html">
-                                        <span>Forgot Password</span>
-                                    </a>
-                                </li>
-                                <li>
-                                    <a class="dropdown-item" href="page-not-found.html">
-                                        <span>Page Not Found</span>
-                                    </a>
-                                </li>
-                                <li>
-                                    <a class="dropdown-item" href="maintenance.html">
-                                        <span>Maintenance</span>
-                                    </a>
-                                </li>
-                            </ul>
-                        </li>
+
+
                     </ul>
                 </div>
             </div>
@@ -631,9 +349,9 @@
                         <ol class="breadcrumb mb-3">
                             <li class="breadcrumb-item">
                                 <i class="icon-home lh-1"></i>
-                                <a href="index.html" class="text-decoration-none">Home</a>
+                                <a href="index.html" class="text-decoration-none">Projet</a>
                             </li>
-                            <li class="breadcrumb-item text-light">Agents</li>
+                            <li class="breadcrumb-item text-light">Laravel</li>
                         </ol>
                         <!-- Breadcrumb end -->
                     </div>
@@ -651,7 +369,7 @@
         <!-- App footer start -->
         <div class="app-footer">
             <div class="container">
-                <span>© Bootstrap Gallery 2024</span>
+                <span>© Massamba DIOUF 2024</span>
             </div>
         </div>
         <!-- App footer end -->
