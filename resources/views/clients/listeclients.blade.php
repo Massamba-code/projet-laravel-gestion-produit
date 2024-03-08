@@ -118,6 +118,8 @@
                         @endcan
                             <button class="btn btn-secondary  " data-bs-toggle="modal" data-bs-target="#export"> Exporter</button>
 
+                                <a href="{{ route('download-pdf') }}" type="submit" class="btn btn-dark"> Export pdf</a>
+
                         <hr>
                         @if(session('status'))
                             <div class="alert alert-success">

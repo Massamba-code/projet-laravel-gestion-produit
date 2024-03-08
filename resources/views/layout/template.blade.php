@@ -213,12 +213,12 @@
                                 data-bs-toggle="dropdown"
                                 aria-expanded="false"
                             >
-                                Tickets
+                                Factures
                             </a>
                             <ul class="dropdown-menu">
                                 <li>
                                     <a class="dropdown-item" href="all-tickets.html">
-                                        <span>All Tickets</span>
+                                        <span>Factures Pdf</span>
                                     </a>
                                 </li>
                                 <li>
