@@ -109,32 +109,30 @@
                             <thead>
                             <tr>
                                 <th></th>
-                                <th> Photo</th>
-                                <th>Libelle</th>
-                                <th>Categorie</th>
-                                <th>Description</th>
-                                <th>Stock</th>
-                                <th>Prix</th>
+                                <th>nom Client</th>
+                                <th>numero</th>
+                                <th>Adresse</th>
+                                <th>Date</th>
+
                                 <th>Actions</th>
                             </tr>
                             </thead>
                             <tbody>
                             <tr>
                             @foreach($commandes as $commande)
-                                @foreach($commande->produits as $produit)
+                                    @if($commande->status=='en attente')
+
 
                                         <td>{{$commande->id}}</td>
-                                        <th>
-                                            <img src="{{asset('storage/'.$produit->photo)}}" class="me-2 img-3x rounded-3" alt="photo commande" />
-                                        </th>
-                                        <td>{{$produit->libelle}}</td>
-                                        <td>{{$produit->categories->titre}}</td>
-                                        <td>{{$produit->description}}</td>
-                                        <td>{{$produit->stock}}</td>
-                                        <td>{{$produit->prix}}</td>
+
+                                        <td>{{$commande->clients->prenom}} {{$commande->clients->nom}}</td>
+                                        <td>{{$commande->clients->numero}}</td>
+                                        <td>{{$commande->clients->adresse}}</td>
+                                        <td>{{ date('Y-m-d', $commande->create_at) }}</td>
+
                                         <!-- Autres colonnes et actions -->
 
-                                @endforeach
+
 
                                     <td>
                                         <form action="{{route('commandes.destroy', $commande->id)}}" method="post">
@@ -175,6 +173,7 @@
                                         </form>
                                     </td>
                                 </tr>
+                            @endif
                             @endforeach
                             </tbody>
                         </table>

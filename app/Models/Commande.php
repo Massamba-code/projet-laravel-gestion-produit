@@ -19,5 +19,9 @@ class Commande extends Model
     {
         return $this->belongsToMany(produitModel::class, 'pivot_commandes','commande_id','produit_id')->withPivot('quantite', 'total');
     }
+    public function clients()
+    {
+        return $this->belongsTo(clientModel::class, 'client_id');
+    }
 
 }

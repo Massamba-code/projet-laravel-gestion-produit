@@ -28,12 +28,13 @@ Route::get('/', function () {
 });
 
 
+
 //Route::get('/',[\App\Http\Controllers\usercontroller::class, 'index']);
 //Route::post('/user/store',[\App\Http\Controllers\usercontroller::class, 'store'])->name('user.store');
 //Route::get('/users.listeusers',[\App\Http\Controllers\usercontroller::class, 'index'])->name('users.listeusers');
 //Route::get('update_etudiant/{id}',[\App\Http\Controllers\usercontroller::class, 'edit'])->name('update_etudiant');
 
-//Route::post('/login',[\App\Http\Controllers\AuthController::class,'login'])->name('login');
+//Route::get('/login',[\App\Http\Controllers\AuthController::class,'login'])->name('login');
 
 Auth::routes();
 
@@ -42,6 +43,10 @@ Route::get('/clients/export', [exportcontroller::class, 'clientexport'])->name('
 Route::get('/produits/export', [exportcontroller::class, 'produitexport'])->name('produits.produitexport');
 Route::post('client/view-pdf', [pdfcontroller::class, 'viewPDF'])->name('client.view-pdf');
 Route::get('download-pdf', [pdfcontroller::class, 'downloadPDF'])->name('download-pdf');
+Route::get('/commandes/encours',[commandeController::class, 'encours'])->name('commandes.encours');
+Route::get('/commandes/valider',[commandeController::class, 'valider'])->name('commandes.valider');
+Route::get('/update_commande/{id}',[commandeController::class, 'updatecommande']);
+
 
 Route::resources([
     'roles' => RoleController::class,

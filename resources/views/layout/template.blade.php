@@ -226,21 +226,7 @@
                                     ><span>Open Tickets</span></a
                                     >
                                 </li>
-                                <li>
-                                    <a class="dropdown-item" href="pending-tickets.html"
-                                    ><span>Pending Tickets</span></a
-                                    >
-                                </li>
-                                <li>
-                                    <a class="dropdown-item" href="closed-tickets.html"
-                                    ><span>Closed Tickets</span></a
-                                    >
-                                </li>
-                                <li>
-                                    <a class="dropdown-item" href="solved-tickets.html"
-                                    ><span>Solved Tickets</span></a
-                                    >
-                                </li>
+
                             </ul>
                         </li>
                         <li class="nav-item active-link">
@@ -296,14 +282,14 @@
 
                                 <li>
                                     @can('edit-commande')
-                                    <a class="dropdown-item" href="accordions.html">
+                                    <a class="dropdown-item" href="{{ route('commandes.encours') }}">
                                         <span>En cours</span>
                                     </a>
                                 </li>
                                     @endcan
                                     @can('delete-commande')
                                 <li>
-                                    <a class="dropdown-item" href="alerts.html">
+                                    <a class="dropdown-item" href="{{ route('commandes.valider') }}">
                                         <span>Validés</span>
                                     </a>
                                 </li>

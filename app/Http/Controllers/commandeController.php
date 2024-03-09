@@ -6,6 +6,7 @@ use App\Models\clientModel;
 use App\Models\Commande;
 use App\Models\produitModel;
 use Illuminate\Http\Request;
+use Illuminate\View\View;
 
 class commandeController extends Controller
 {
@@ -98,6 +99,34 @@ class commandeController extends Controller
      */
     public function destroy(string $id)
     {
-        //
+        $commande=Commande::find($id);
+        $commande->produits()->detach();
+        $commande->delete();
+        return redirect()->route('commandes.index');
     }
+    public function encours(): View
+    {
+        $commandes=Commande::all();
+        return view('verification.encours',compact('commandes'));
+
+    }
+    public function valider(): View
+    {
+        $commandes=Commande::all();
+        return view('validation.valider',compact('commandes'));
+
+    }
+    public function updatecommande(string $id)
+    {
+        $commande=Commande::find($id);
+        if ($commande->status=='en attente'){
+            $commande->update(['status' => 'validée']);
+        }else{
+            if ($commande->status=='valider'){
+                $commande->update(['status' => 'livrée']);
+            }
+        }
+        return redirect()->route('commandes.encours');
+    }
+
 }

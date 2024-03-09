@@ -14,7 +14,7 @@ return new class extends Migration
         Schema::create('commandes', function (Blueprint $table) {
             $table->id();
             $table->date('date_commande');
-            $table->enum('status',['en attente', 'validée','livrée'])->default('en attente');
+            $table->enum('status',['enattente', 'validée','livrée'])->default('enattente');
 
             // Clé étrangère pour la relation entre commandes et clients
             $table->unsignedBigInteger('client_id');
